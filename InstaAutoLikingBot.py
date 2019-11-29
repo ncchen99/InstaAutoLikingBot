@@ -2,8 +2,8 @@ from selenium import webdriver  # selenium 的用法可參見 5-7 節
 from time import sleep
 # 匯入 time 模組的 sleep() 函式
 
-username='' #在這裡輸入你的userID
-password=''#在這裡輸入你的密碼
+username='***REMOVED***' #在這裡輸入你的userID
+password='***REMOVED***' #在這裡輸入你的密碼
 
 def signIn(driver):
         driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input').send_keys(username) 
@@ -12,12 +12,12 @@ def signIn(driver):
 def startFlash(driver):
         driver.find_element_by_xpath('/html/body/div[3]/div/div/div[3]/button[2]').click() #按下斥再縮
         driver.implicitly_wait(2)
-        url = 'https://www.instagram.com/'+ username+ '/following/'
+        url = 'https://www.instagram.com/'+ username
         driver.get(url)
-        sleep(4)
+        sleep(2)
         driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a/span').click()
         for index in range(int(driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a/span').get_attribute('textContent'))):
-                sleep(3)
+                sleep(1)
                 driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/ul/div/li['+str(index+1)+']/div/div[1]/div').click()#用圖片按follow的人
                 #/html/body/div[3]/div/div[2]/ul/div/li[1]/div/div[1]/div[2]/div[1]/a
                 driver.implicitly_wait(2)
@@ -27,8 +27,15 @@ def startFlash(driver):
                     print("already in page")
                 driver.implicitly_wait(2)
                 #點開貼文，開始案愛心
-                #allPostsLen=len(driver.find_elements_by_css_selector("div[class='v1Nh3 kIKUG  _bz0w']"))
-                firstPost=driver.find_element_by_css_selector("div[class='v1Nh3 kIKUG  _bz0w']")
+                try:
+                        firstPost=driver.find_element_by_css_selector("div[class='v1Nh3 kIKUG  _bz0w']")
+                except:
+                        print("NO post")
+                        driver.get(url)
+                        sleep(2)
+                        driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a').click()
+                        sleep(2)
+                        continue
                 print(firstPost)
                 firstPost.click()
                 sleep(2)
@@ -45,10 +52,12 @@ def startFlash(driver):
                         except:
                                 break
                         sleep(2)
-                        
                 driver.get(url)
-                driver.implicitly_wait(2)
+                sleep(2)
                 driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a').click()
+                sleep(2)
+                        
+                
                 
 def main():
         url = 'https://www.instagram.com/accounts/login/?source=auth_switcher' 
