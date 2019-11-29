@@ -10,8 +10,7 @@
  </br>
  把下圖的B部分勾選起來，
 接著點選A(Customize installation)
- ![](https://i.imgur.com/65HCGjB.png)
- </br>
+ ![](https://i.imgur.com/65HCGjB.png) </br>
 接下來使用預設就好，按下Next
 ![](https://i.imgur.com/sT6m1lN.png)
 - ### Step2.安裝Selenium
