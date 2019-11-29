@@ -7,12 +7,11 @@
 - ### Step1.安裝Python
   [Python下載頁面](https://www.python.org/downloads/)
  ![](https://i.imgur.com/x67XyLb.png)
- </br>
  把下圖的B部分勾選起來，
-接著點選A(Customize installation)
- ![](https://i.imgur.com/65HCGjB.png) </br>
-接下來使用預設就好，按下Next
-![](https://i.imgur.com/sT6m1lN.png)
+ 接著點選A(Customize installation)
+ ![](https://i.imgur.com/65HCGjB.png) 
+ 接下來使用預設就好，按下Next
+ ![](https://i.imgur.com/sT6m1lN.png)
 - ### Step2.安裝Selenium
     打開cmd，安裝Selenium
     ```
