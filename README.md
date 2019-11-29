@@ -1,24 +1,23 @@
 ###### tags: `python` `selenium` `bot`
 ![](https://i.imgur.com/KjZz18K.png)
 ## 前製作業
-
-
+&#160; &#160; &#160; &#160;以下教程適用windows
 
 - ### Step1.安裝Python
   [Python下載頁面](https://www.python.org/downloads/)
  ![](https://i.imgur.com/x67XyLb.png=1080x)
  把下圖的B部分勾選起來，
-接著點選A(Customize installation)
+ 接著點選A(Customize installation)
  ![](https://i.imgur.com/65HCGjB.png=1080x)
-接下來使用預設就好，按下Next
-![](https://i.imgur.com/sT6m1lN.png=1080x)
+ </br>接下來使用預設就好，按下Next
+ ![](https://i.imgur.com/sT6m1lN.png=1080x)
 - ### Step2.安裝Selenium
-     python安裝好，要安裝Selenium很方便，靠pip一行就可以解決了
+    打開cmd，安裝Selenium
     ```
     pip install selenium
     ```
     ![](https://i.imgur.com/vV5LVEb.png=1080x)
-    看到這樣就表示成功安裝selenium惹!
+    </br>看到這樣就表示成功安裝selenium惹!
 - ### Step3.下載webdriver
     
     到設定➡關於，查看現在使用中的Chrome版本
