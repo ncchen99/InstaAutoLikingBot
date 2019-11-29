@@ -7,13 +7,15 @@
 - ### Step1.安裝Python
   [Python下載頁面](https://www.python.org/downloads/)
  ![](https://i.imgur.com/x67XyLb.png)
+ </br>
  把下圖的B部分勾選起來，
 接著點選A(Customize installation)
  ![](https://i.imgur.com/65HCGjB.png)
+ </br>
 接下來使用預設就好，按下Next
 ![](https://i.imgur.com/sT6m1lN.png)
 - ### Step2.安裝Selenium
-     python安裝好，要安裝Selenium很方便，靠pip一行就可以解決了
+    打開cmd，安裝Selenium
     ```
     pip install selenium
     ```
