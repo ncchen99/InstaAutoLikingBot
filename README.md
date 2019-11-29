@@ -6,7 +6,7 @@
 
 - ### Step1.安裝Python
   [Python下載頁面](https://www.python.org/downloads/)
- ![](https://i.imgur.com/x67XyLb.png =1080x)
+ ![](https://i.imgur.com/x67XyLb.png=1080x)
  把下圖的B部分勾選起來，
 接著點選A(Customize installation)
  ![](https://i.imgur.com/65HCGjB.png=1080x)
