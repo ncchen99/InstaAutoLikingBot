@@ -2,8 +2,8 @@ from selenium import webdriver  # selenium 的用法可參見 5-7 節
 from time import sleep
 # 匯入 time 模組的 sleep() 函式
 
-username='***REMOVED***' #在這裡輸入你的userID
-password='***REMOVED***' #在這裡輸入你的密碼
+username='' #在這裡輸入你的userID
+password='' #在這裡輸入你的密碼
 
 def signIn(driver):
         driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input').send_keys(username) 
@@ -46,7 +46,7 @@ def startFlash(driver):
                                 driver.find_element_by_css_selector("span[class='fr66n']").click()
                         except:
                                 print("already liked!")
-                                
+                        sleep(1)
                         try:
                                 driver.find_element_by_css_selector("a[class='HBoOv coreSpriteRightPaginationArrow']").click()
                         except:
