@@ -2,15 +2,16 @@ from selenium import webdriver  # selenium 的用法可參見 5-7 節
 from time import sleep
 # 匯入 time 模組的 sleep() 函式
 
-username='' #在這裡輸入你的userID
-password='' #在這裡輸入你的密碼
+username='***REMOVED***' #在這裡輸入你的userID
+password='***REMOVED***' #在這裡輸入你的密碼
 
 def signIn(driver):
         driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[2]/div/label/input').send_keys(username) 
         driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[3]/div/label/input').send_keys(password + "\n") 
 
 def startFlash(driver):
-        driver.find_element_by_xpath('/html/body/div[3]/div/div/div[3]/button[2]').click() #按下斥再縮
+        driver.find_element_by_css_selector("button[class='aOOlW   HoLwm ']").click() #按下斥再說
+        sleep(1)
         driver.implicitly_wait(2)
         url = 'https://www.instagram.com/'+ username
         driver.get(url)
@@ -51,7 +52,7 @@ def startFlash(driver):
                                 driver.find_element_by_css_selector("a[class='HBoOv coreSpriteRightPaginationArrow']").click()
                         except:
                                 break
-                        sleep(2)
+                        sleep(1.5)
                 driver.get(url)
                 sleep(2)
                 driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a').click()
