@@ -19,7 +19,9 @@ def startFlash(driver):
         driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a/span').click()
         for index in range(int(driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[3]/a/span').get_attribute('textContent'))):
                 sleep(1)
-                driver.find_element_by_xpath('/html/body/div[3]/div/div[2]/ul/div/li['+str(index+1)+']/div/div[1]/div').click()#用圖片按follow的人
+                # /html/body/div[4]/div/div[2]/ul/div/li[1]/div/div[2]/div[1]/div/div/a
+                # /html/body/div[4]/div/div[2]/ul/div/li[2]/div/div[1]/div
+                driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/ul/div/li['+str(index+1)+']/div/div[1]/div').click()#用圖片按follow的人
                 #/html/body/div[3]/div/div[2]/ul/div/li[1]/div/div[1]/div[2]/div[1]/a
                 driver.implicitly_wait(2)
                 try: 
@@ -66,6 +68,6 @@ def main():
         driver.get(url)            
         driver.maximize_window()   # 將視窗最大化
         signIn(driver) #登入
-        driver.implicitly_wait(2)
+        sleep(4)
         startFlash(driver)
 main()
