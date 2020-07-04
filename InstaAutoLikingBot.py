@@ -3,8 +3,8 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 # 匯入 time 模組的 sleep() 函式
 
-username='ncchen.foss' #在這裡輸入你的userID
-password='nbchen11' #在這裡輸入你的密碼
+username='' #在這裡輸入你的userID
+password='' #在這裡輸入你的密碼
 
 def signIn(driver):
         driver.find_element_by_name('username').send_keys(username) 
