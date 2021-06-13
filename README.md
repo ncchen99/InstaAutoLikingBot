@@ -44,10 +44,6 @@
     
     ![](https://i.imgur.com/E62O42l.png)
     
-    修改程式第5、6行，為自己的帳號密碼，如下----
-    
-    ![](https://i.imgur.com/pMjp229.png)
-    
     最後按F5執行 ❤  `\(@^0^@)/`
 
 
