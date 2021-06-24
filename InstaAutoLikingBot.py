@@ -4,13 +4,13 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 # 匯入 time 模組的 sleep() 函式
 
-# ==============================全慾變數===================================
+# ==============================全域變數===================================
 username = ''
 password = ''
 loveResources = []
 lovePostImg = []
 
-# ===============================找對象====================================
+# ===============================尋找新貼文====================================
 
 
 def findNewPost(driver):
@@ -27,13 +27,13 @@ def findNewPost(driver):
         print(e)
 
 
-# ==============================先登『入』==================================
+# ==============================先『登入』==================================
 def signIn(driver):
     driver.find_element_by_name('username').send_keys(username)
     driver.find_element_by_name('password').send_keys(password + "\n")
 
 
-# ==============================開始做愛====================================
+# ==============================開始按愛心====================================
 def makeLove(driver):
     driver.find_element_by_xpath(
         "//*[contains(text(), 'Not Now')]").click()  # 按先不要
@@ -78,7 +78,7 @@ def main():
     sleep(3)
     signIn(driver)  # 登入
     sleep(5)
-    makeLove(driver)  # 作愛
+    makeLove(driver)  # 按愛心
 
 
 if __name__ == "__main__":
